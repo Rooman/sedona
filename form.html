@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Контакты</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="page-header">
+  <nav class="main-nav">
+    <div class="page-header__logo">
+      <img src="http://placehold.it/100x85" alt="page logo" width="100" height="85">
+    </div>
+    <button class="main-nav__toggle">Открыть меню</button>
+    <div class="main-nav__wrapper">
+      <ul class="main-nav__items">
+        <li class="main-nav__item"><a href="index.html">Главная</a></li>
+        <li class="main-nav__item"><a href="media.html">Фото и видео</a></li>
+        <li class="main-nav__item"><a href="form.html">Форма отзыва</a></li>
+        <li class="main-nav__item"><a href="#">html academy</a></li>
+      </ul>
+    </div>
+  </nav>
+  <h1 class="page-header__title">
+    Оставьте свой отзыв
+  </h1>
+  <p class="page-header__sub-title">
+    Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримечательностях
+  </p>
+</header>
+<main>
+  <section class="feedback">
+    <div class="feedback__wrapper">
+      <form action="feedback.do" method="post" class="feedback__form">
+        <fieldset class="feedback__name-input">
+          <legend>Представтесь:</legend>
+          <div class="feedback__firstName-wrapper">
+            <label for="firstName">Имя*:</label><input type="text" id="firstName" name="firstName">
+          </div>
+          <div class="feedback__lastName-wrapper">
+            <label for="lastName">Фамилия*:</label><input type="text" id="lastName" name="lastName">
+          </div>
+          <div class="feedback__middleName-wrapper">
+            <label for="middleName">Отчество*:</label><input type="text" id="middleName" name="middleName">
+          </div>
+        </fieldset>
+        <fieldset class="feedback__contacts">
+          <legend>Контактная информация:</legend>
+          <div class="feedback__phone-wrapper"><label for="phone">Контактный телефон*:</label>
+            <input type="tel" id="phone" name="phone" placeholder="Введите телефон"></div>
+          <div class="feedback__phone-validation-wrapper">
+            <span class="feedback__phone-validation hidden">Ошибка, пожалуйста перепроверьте номер</span>
+          </div>
+          <div class="feedback__email-wrapper"><label for="email">Электронная почта*:</label>
+            <input type="email" id="email" name="email" placeholder="Введите e-mail"></div>
+        </fieldset>
+        <fieldset class="feedback__feelings">
+          <legend>Ваше общее впечатление:</legend>
+          <div class="feedback__feelings-wrapper">
+            <label for="goodFeelings">
+              <input id="goodFeelings" type="radio" name="feelings" value="1">Скорее положительное</label>
+            <label for="badFeelings">
+              <input id="badFeelings" type="radio" name="feelings" value="2">Скорее отрицательное</label>
+            <label for="uncertainFeelings">
+              <input id="uncertainFeelings" type="radio" name="feelings" value="3">Затрудняюсь ответить</label>
+          </div>
+        </fieldset>
+        <fieldset class="feedback__visited-places">
+          <legend>Посещенные достопримечательности:</legend>
+          <div class="feedback__places-checkbox-wrapper">
+            <label for="placeOne">
+              <input id="placeOne" type="checkbox" name="place_1">Мост Дьявола</label>
+            <label for="placeTwo">
+              <input id="placeTwo" type="checkbox" name="place_2">Слайд-парк</label>
+            <label for="placeTree">
+              <input id="placeTree" type="checkbox" name="place_3">Гора-колокол</label>
+            <label for="placeFour">
+              <input id="placeFour" type="checkbox" name="place_4">Красные скалы</label>
+          </div>
+        </fieldset>
+        <fieldset class="feedback__emotions-text">
+          <legend>Опишите свои эмоции:</legend>
+          <div class="feedback__emotions-area-wrapper">
+          <textarea name="emotions-text" cols="30" rows="10"
+                    placeholder="Опишите подробно все свои восторги"></textarea>
+          </div>
+        </fieldset>
+        <div class="feedback__submit-wrapper">
+          <button type="submit" class="btn">отправить заказ</button>
+        </div>
+      </form>
+    </div>
+  </section>
+</main>
+<footer class="page-footer">
+  <div class="page-footer__wrapper">
+    <p class="page-footer__header">#visitsedona</p>
+    <div class="page-footer__social-icons-wrapper">
+      <ul class="social">
+        <li class="social__item"><a href="#">Twitter</a></li>
+        <li class="social__item"><a href="#">Facebook</a></li>
+        <li class="social__item"><a href="#">Youtube</a></li>
+      </ul>
+    </div>
+    <div class="copyright">Разработано</div>
+  </div>
+</footer>
+</body>
+</html>
+
+
