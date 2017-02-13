@@ -1,0 +1,38 @@
+.main-nav {
+  text-transform: uppercase;
+}
+
+.main-nav__items {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.main-nav__item {
+  background-color: $primary-color;
+  text-align: center;
+  padding: 20px 0;
+  border-top: 1px solid #9ac2db;
+  border-bottom: 1px solid #81b3d2;
+}
+
+.main-nav__item:first-child {
+  border-top: none;
+}
+
+.main-nav__item:last-child {
+  border-bottom: none;
+}
+
+.main-nav__item a {
+  color: $white-color;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.main-nav__toggle-open {
+  border: 0;
+  background-color: $white-color;
+}
+

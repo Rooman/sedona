@@ -2,6 +2,7 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
+  <meta name=viewport content="width=device-width, initial-scale=1">
   <title>Контакты</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -9,7 +10,7 @@
 <header class="page-header">
   <nav class="main-nav">
     <div class="page-header__logo">
-      <img src="http://placehold.it/100x85" alt="page logo" width="100" height="85">
+      <img src="img/logo-sedona-mobile.svg" alt="page logo" width="100" height="85">
     </div>
     <button class="main-nav__toggle">Открыть меню</button>
     <div class="main-nav__wrapper">
@@ -21,18 +22,23 @@
       </ul>
     </div>
   </nav>
-  <h1 class="page-header__title">
-    Оставьте свой отзыв
-  </h1>
-  <p class="page-header__sub-title">
-    Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримечательностях
-  </p>
+  <div class="page-header__wrapper">
+    <img class="page-header__title" src="img/text-sedona.svg" alt="welcome to Sedona" width="280" height="215">
+  </div>
+  <div class="page-header__title-wrapper">
+    <h1 class="page-header__title">
+      Оставьте свой отзыв
+    </h1>
+    <p class="page-header__sub-title">
+      Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримечательностях
+    </p>
+  </div>
 </header>
 <main>
   <section class="feedback">
     <div class="feedback__wrapper">
       <form action="feedback.do" method="post" class="feedback__form">
-        <fieldset class="feedback__name-input">
+        <fieldset class="feedback__name feedback-fieldset">
           <legend>Представтесь:</legend>
           <div class="feedback__firstName-wrapper">
             <label for="firstName">Имя*:</label><input type="text" id="firstName" name="firstName">
@@ -44,41 +50,59 @@
             <label for="middleName">Отчество*:</label><input type="text" id="middleName" name="middleName">
           </div>
         </fieldset>
-        <fieldset class="feedback__contacts">
+        <fieldset class="feedback__contacts feedback-fieldset">
           <legend>Контактная информация:</legend>
           <div class="feedback__phone-wrapper"><label for="phone">Контактный телефон*:</label>
-            <input type="tel" id="phone" name="phone" placeholder="Введите телефон"></div>
+            <input type="tel" id="phone" name="phone" placeholder="Введите телефон">
+            <img src="img/icon-phone.svg" alt="phone icon">
+          </div>
           <div class="feedback__phone-validation-wrapper">
-            <span class="feedback__phone-validation hidden">Ошибка, пожалуйста перепроверьте номер</span>
+            <span class="feedback__phone-validation hidden">Ошибка, перепроверьте номер</span>
           </div>
           <div class="feedback__email-wrapper"><label for="email">Электронная почта*:</label>
-            <input type="email" id="email" name="email" placeholder="Введите e-mail"></div>
+            <input type="email" id="email" name="email" placeholder="Введите e-mail">
+            <img src="img/icon-mail.svg" alt="email icon">
+          </div>
         </fieldset>
-        <fieldset class="feedback__feelings">
+        <fieldset class="feedback__feelings feedback-fieldset">
           <legend>Ваше общее впечатление:</legend>
           <div class="feedback__feelings-wrapper">
-            <label for="goodFeelings">
-              <input id="goodFeelings" type="radio" name="feelings" value="1">Скорее положительное</label>
-            <label for="badFeelings">
-              <input id="badFeelings" type="radio" name="feelings" value="2">Скорее отрицательное</label>
-            <label for="uncertainFeelings">
-              <input id="uncertainFeelings" type="radio" name="feelings" value="3">Затрудняюсь ответить</label>
+            <div class="feedback__feeling-item">
+              <label for="goodFeelings">
+                <input id="goodFeelings" type="radio" name="feelings" value="1">Скорее положительное</label>
+            </div>
+            <div class="feedback__feeling-item">
+              <label for="badFeelings">
+                <input id="badFeelings" type="radio" name="feelings" value="2">Скорее отрицательное</label>
+            </div>
+            <div class="feedback__feeling-item">
+              <label for="uncertainFeelings">
+                <input id="uncertainFeelings" type="radio" name="feelings" value="3">Затрудняюсь ответить</label>
+            </div>
           </div>
         </fieldset>
-        <fieldset class="feedback__visited-places">
+        <fieldset class="feedback__visited-places feedback-fieldset">
           <legend>Посещенные достопримечательности:</legend>
           <div class="feedback__places-checkbox-wrapper">
-            <label for="placeOne">
-              <input id="placeOne" type="checkbox" name="place_1">Мост Дьявола</label>
-            <label for="placeTwo">
-              <input id="placeTwo" type="checkbox" name="place_2">Слайд-парк</label>
-            <label for="placeTree">
-              <input id="placeTree" type="checkbox" name="place_3">Гора-колокол</label>
-            <label for="placeFour">
-              <input id="placeFour" type="checkbox" name="place_4">Красные скалы</label>
+            <div class="feedback__place-item">
+              <label for="placeOne">
+                <input id="placeOne" type="checkbox" name="place_1">Мост Дьявола</label>
+            </div>
+            <div class="feedback__place-item">
+              <label for="placeTwo">
+                <input id="placeTwo" type="checkbox" name="place_2">Слайд-парк</label>
+            </div>
+            <div class="feedback__place-item">
+              <label for="placeTree">
+                <input id="placeTree" type="checkbox" name="place_3">Гора-колокол</label>
+            </div>
+            <div class="feedback__place-item">
+              <label for="placeFour">
+                <input id="placeFour" type="checkbox" name="place_4">Красные скалы</label>
+            </div>
           </div>
         </fieldset>
-        <fieldset class="feedback__emotions-text">
+        <fieldset class="feedback__emotions-text feedback-fieldset">
           <legend>Опишите свои эмоции:</legend>
           <div class="feedback__emotions-area-wrapper">
           <textarea name="emotions-text" cols="30" rows="10"
@@ -97,12 +121,16 @@
     <p class="page-footer__header">#visitsedona</p>
     <div class="page-footer__social-icons-wrapper">
       <ul class="social">
-        <li class="social__item"><a href="#">Twitter</a></li>
-        <li class="social__item"><a href="#">Facebook</a></li>
-        <li class="social__item"><a href="#">Youtube</a></li>
+        <li class="social__item"><a href="#"><img src="img/icon-twitter.svg" alt="Twitter"></a></li>
+        <li class="social__item"><a href="#"><img src="img/icon-facebook.svg" alt="Facebook"></a></li>
+        <li class="social__item"><a href="#"><img src="img/icon-youtube.svg" alt="Youtube"></a></li>
       </ul>
     </div>
-    <div class="copyright">Разработано</div>
+    <p class="copyright">Разработано
+      <a href="https://www.htmlacademy.ru">
+        <img src="img/logo-htmlacademy.svg" alt="www.htmlacademy.ru" height="34" width="27">
+      </a>
+    </p>
   </div>
 </footer>
 </body>

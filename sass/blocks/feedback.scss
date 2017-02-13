@@ -1,0 +1,50 @@
+.feedback {
+  padding: 0 10px;
+}
+
+.feedback__name label,
+.feedback__contacts label {
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+.feedback__name input,
+.feedback__contacts input,
+.feedback__emotions-text textarea {
+  height: 60px;
+  border: 0;
+  background-color: $input-text-bg;
+  font-size: 18px;
+  font-weight: bold;
+  color: $black-color;
+  padding: 22px;
+}
+
+.feedback__phone-wrapper input + img,
+.feedback__email-wrapper input + img {
+  background-color: $input-icon-bg;
+}
+
+.feedback__phone-validation {
+  color: $warning-color;
+  font-size: 14px;
+}
+
+.feedback__feelings-wrapper label,
+.feedback__places-checkbox-wrapper label {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.feedback__feelings-wrapper input,
+.feedback__places-checkbox-wrapper input {
+  outline: 0;
+}
+
+.feedback__feeling-item {
+  margin-bottom: 14px;
+}
+
+.feedback__place-item {
+  margin-bottom: 25px;
+}

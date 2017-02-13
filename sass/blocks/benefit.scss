@@ -1,0 +1,29 @@
+.benefit__header {
+  background-color: $gray-color;
+  padding: 35px 0;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.benefit__header--primary {
+  background-color: $primary-color;
+  padding: 45px 0;
+  color: $white-color;
+}
+
+.benefit__overview-item {
+  background-size: 38px 38px;
+  background-repeat: no-repeat;
+}
+
+.benefit__overview-item:nth-child(1) {
+  background-image: url("../img/icon-house.svg");
+}
+
+.benefit__overview-item:nth-child(2) {
+  background-image: url("../img/icon-gift.svg");
+}
+
+.benefit__overview-item:nth-child(3) {
+  background-image: url("../img/icon-burger.svg");
+}

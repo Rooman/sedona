@@ -2,6 +2,7 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
+  <meta name=viewport content="width=device-width, initial-scale=1">
   <title>Медиа</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -9,9 +10,10 @@
 <header class="page-header">
   <nav class="main-nav">
     <div class="page-header__logo">
-      <img src="http://placehold.it/100x85" alt="page logo" width="100" height="85">
+      <img src="img/logo-sedona-mobile.svg" alt="page logo" width="100" height="85">
     </div>
-    <button class="main-nav__toggle">Открыть меню</button>
+    <button class="main-nav__toggle-open"><img src="img/icon-menu.svg" alt="Открыть меню"></button>
+    <button class="main-nav__toggle-close">Закрыть меню</button>
     <div class="main-nav__wrapper">
       <ul class="main-nav__items">
         <li class="main-nav__item"><a href="index.html">Главная</a></li>
@@ -33,37 +35,37 @@
     <div class="photos_wrapper">
       <article class="photo-item">
         <div class="photo-item__wrapper">
-          <a href="#"><img src="http://placehold.it/280x280" alt="photo 1" width="280" height="280"></a>
+          <a href="#"><img src="img/photo-1-mobile@1x.jpg" alt="photo 1" width="280" height="280"></a>
           <h3 class="photo-item__title">Неродные просторы</h3>
           <cite class="photo-item__author">Автор фото: Борис</cite>
-          <button href="#" class="thumps_up">Мне нравится!</button>
+          <button class="thumps_up">Мне нравится!</button>
           <span class="photo-item__likes-count">1350</span>
         </div>
       </article>
       <article class="photo-item">
         <div class="photo-item__wrapper">
-          <a href="#"><img src="http://placehold.it/280x280" alt="photo 2" width="280" height="280"></a>
+          <a href="#"><img src="img/photo-2-mobile@1x.jpg" alt="photo 2" width="280" height="280"></a>
           <h3 class="photo-item__title">Местная растительность</h3>
           <cite class="photo-item__author">Автор фото: Сергей</cite>
-          <button href="#" class="thumps_up">Мне нравится!</button>
+          <button class="thumps_up">Мне нравится!</button>
           <span class="photo-item__likes-count">143</span>
         </div>
       </article>
       <article class="photo-item">
         <div class="photo-item__wrapper">
-          <a href="#"><img src="http://placehold.it/280x280" alt="photo 3" width="280" height="280"></a>
+          <a href="#"><img src="img/photo-3-mobile@1x.jpg" alt="photo 3" width="280" height="280"></a>
           <h3 class="photo-item__title">Дорога на север</h3>
           <cite class="photo-item__author">Автор фото: Петр</cite>
-          <button href="#" class="thumps_up">Мне нравится!</button>
+          <button class="thumps_up">Мне нравится!</button>
           <span class="photo-item__likes-count">96</span>
         </div>
       </article>
       <article class="photo-item">
         <div class="photo-item__wrapper">
-          <a href="#"><img src="http://placehold.it/280x280" alt="photo 4" width="280" height="280"></a>
+          <a href="#"><img src="img/photo-4-mobile@1x.jpg" alt="photo 4" width="280" height="280"></a>
           <h3 class="photo-item__title">Мост дьявола</h3>
           <cite class="photo-item__author">Автор фото: Антон</cite>
-          <button href="#" class="thumps_up">Мне нравится!</button>
+          <button class="thumps_up">Мне нравится!</button>
           <span class="photo-item__likes-count">254</span>
         </div>
       </article>
@@ -83,12 +85,16 @@
     <p class="page-footer__header">#visitsedona</p>
     <div class="page-footer__social-icons-wrapper">
       <ul class="social">
-        <li class="social__item"><a href="#">Twitter</a></li>
-        <li class="social__item"><a href="#">Facebook</a></li>
-        <li class="social__item"><a href="#">Youtube</a></li>
+        <li class="social__item"><a href="#"><img src="img/icon-twitter.svg" alt="Twitter"></a></li>
+        <li class="social__item"><a href="#"><img src="img/icon-facebook.svg" alt="Facebook"></a></li>
+        <li class="social__item"><a href="#"><img src="img/icon-youtube.svg" alt="Youtube"></a></li>
       </ul>
     </div>
-    <div class="copyright">Разработано</div>
+    <p class="copyright">Разработано
+      <a href="https://www.htmlacademy.ru">
+        <img src="img/logo-htmlacademy.svg" alt="www.htmlacademy.ru" height="34" width="27">
+      </a>
+    </p>
   </div>
 </footer>
 

@@ -1,0 +1,17 @@
+.social {
+  text-align: center;
+  list-style-type: none;
+}
+
+.social__item {
+  width: 47px;
+  height: 48px;
+  background-color: $primary-color;
+  margin-right: 6px;
+  display: inline-block;
+  text-align: center;
+}
+
+.social__item:last-child {
+  margin-right: 0;
+}
