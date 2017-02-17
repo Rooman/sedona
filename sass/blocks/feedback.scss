@@ -1,11 +1,16 @@
 .feedback {
-  padding: 0 10px;
+  padding: 0 20px;
+}
+
+.feedback__name-wrapper {
+  padding: 25px 0;
 }
 
 .feedback__name label,
 .feedback__contacts label {
   text-transform: uppercase;
   font-size: 14px;
+  display: inline-block;
 }
 
 .feedback__name input,
@@ -20,14 +25,39 @@
   padding: 22px;
 }
 
-.feedback__phone-wrapper input + img,
-.feedback__email-wrapper input + img {
+.feedback__phone-wrapper {
+  margin-bottom: 50px;
+  position: relative;
+}
+
+.feedback__phone-wrapper img {
+  height: 18px;
+  width: 18px;
   background-color: $input-icon-bg;
+}
+
+.feedback__phone-wrapper label,
+.feedback__email-wrapper label {
+  display: inline-block;
+  margin-bottom: 15px;
+}
+
+.feedback__email-wrapper img {
+  height: 12px;
+  width: 16px;
+  background-color: $input-icon-bg;
+}
+
+.feedback__phone-wrapper input,
+.feedback__email-wrapper input {
+  width: 222px;
 }
 
 .feedback__phone-validation {
   color: $warning-color;
   font-size: 14px;
+  position: absolute;
+  bottom: -27px;
 }
 
 .feedback__feelings-wrapper label,
@@ -42,9 +72,102 @@
 }
 
 .feedback__feeling-item {
-  margin-bottom: 14px;
+  margin-bottom: 50px;
+}
+
+.feedback__feeling-item:last-child {
+  margin-bottom: 0;
+}
+
+.feedback__feelings input[type="radio"] {
+  display: none;
+}
+
+.feedback__feelings label {
+  display: inline-block;
+  padding-left: 80px;
+  position: relative;
+  cursor: pointer;
+}
+
+.feedback__feelings label::before {
+  content: "";
+  display: block;
+  height: 58px;
+  width: 58px;
+  background-color: $radio-bg-color;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+}
+
+.feedback__feelings label::after {
+  content: "";
+  display: none;
+  height: 22px;
+  width: 22px;
+  background-color: $radio-checked-color;
+  position: absolute;
+  top: 18px;
+  left: 18px;
+  border-radius: 50%;
+}
+
+.feedback__feelings input[type="radio"]:checked + label::after {
+  display: block;
+}
+
+.feedback__visited-places input[type="checkbox"] {
+  display: none;
+}
+
+.feedback__visited-places label {
+  display: inline-block;
+  padding-left: 80px;
+  position: relative;
+  cursor: pointer;
+}
+
+.feedback__visited-places label::before {
+  content: "";
+  display: block;
+  height: 56px;
+  width: 56px;
+  background-color: $radio-bg-color;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 5px;
+}
+
+.feedback__visited-places label::after {
+  content: "";
+  display: none;
+  height: 16px;
+  width: 24px;
+  background: url("../img/icon-tick.svg") no-repeat;
+  position: absolute;
+  top: 20px;
+  left: 16px;
+}
+
+.feedback__visited-places input[type="checkbox"]:checked + label::after {
+  display: block;
 }
 
 .feedback__place-item {
-  margin-bottom: 25px;
+  margin-bottom: 67px;
+}
+
+.feedback__place-item:last-child {
+  margin-bottom: 0;
+}
+
+.feedback__submit-wrapper button {
+  margin: 0 auto;
+}
+
+.feedback__emotions-text textarea {
+  min-height: 160px;
 }

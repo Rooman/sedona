@@ -1,0 +1,28 @@
+.contact {
+  text-align: center;
+}
+
+.contact__wrapper {
+  padding: 35px 0 50px;
+}
+
+.contact__title {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 26px;
+  margin-bottom: 32px;
+}
+
+.contact__description {
+  text-transform: uppercase;
+  font-size: 14px;
+  line-height: 24px;
+  margin-bottom: 42px;
+  padding: 0 25px;
+  color: $general-desc-color;
+}
+
+.contact .btn {
+  margin: 0 auto;
+}

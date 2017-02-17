@@ -1,5 +1,25 @@
 .main-nav {
   text-transform: uppercase;
+  position: relative;
+}
+
+.main-nav__logo {
+  width: 102px;
+  height: 84px;
+  position: absolute;
+  bottom: -84px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  z-index: 1;
+}
+
+.main-nav__toggle-close {
+  height: 25px;
+  width: 25px;
+  position: absolute;
+  right: 20px;
+  top: 17px;
 }
 
 .main-nav__items {
