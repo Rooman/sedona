@@ -6,6 +6,16 @@
   margin: auto;
 }
 
+.copyright__text,
+.copyright__img {
+  vertical-align: middle;
+}
+
+.copyright__text {
+  display: inline-block;
+  margin-right: 12px;
+}
+
 .copyright__img {
   width: 27px;
   height: 35px;

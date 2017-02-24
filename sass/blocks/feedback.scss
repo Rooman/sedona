@@ -64,15 +64,20 @@
 .feedback__places-checkbox-wrapper label {
   font-size: 18px;
   font-weight: bold;
+  //display: inline-block;
+  //vertical-align: middle;
 }
 
 .feedback__feelings-wrapper input,
 .feedback__places-checkbox-wrapper input {
   outline: 0;
+  //display: inline-block;
+  //vertical-align: middle;
 }
 
 .feedback__feeling-item {
   margin-bottom: 50px;
+
 }
 
 .feedback__feeling-item:last-child {
@@ -88,6 +93,8 @@
   padding-left: 80px;
   position: relative;
   cursor: pointer;
+  min-height: 58px;
+  line-height: 58px;
 }
 
 .feedback__feelings label::before {
@@ -127,6 +134,8 @@
   padding-left: 80px;
   position: relative;
   cursor: pointer;
+  min-height: 56px;
+  line-height: 56px;
 }
 
 .feedback__visited-places label::before {
