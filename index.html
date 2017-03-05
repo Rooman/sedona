@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<header class="page-header">
+<header class="page-header container">
   <nav class="main-nav">
     <div class="main-nav__logo">
       <img src="img/logo-sedona-mobile.svg" alt="page logo" width="100" height="85">
@@ -29,107 +29,110 @@
   <div class="page-header__title-wrapper">
     <h1 class="page-header__title">
       <!--как правильно переносить слова, что бы были как на макете? использовать br ?-->
-      Седона — небольшой городок в Аризоне, заслуживающий большего!
+      Седона — небольшой городок в Аризоне,<br>заслуживающий большего!
     </h1>
     <p class="page-header__sub-title">
       Рассмотрим 5 причин, по которым Седона круче чем гранд каньон!
     </p>
   </div>
 </header>
-<main>
+<main class="container">
   <section class="benefit">
     <div class="benefit__wrapper">
-      <div class="benefit__header-wrapper">
-        <header class="benefit__header benefit__header--primary">
-          <h2 class="benefit__title">Настоящий городок</h2>
+      <div class="benefit__header-wrapper clearfix">
+        <header class="benefit__header benefit__header--primary benefit__header--toLeft">
+          <h2 class="benefit__title">Настоящий<br class="hidden-on-mobile"> городок</h2>
           <p class="benefit__number-subtitle">— №1 —</p>
           <p class="benefit__subtitle">Седона не аттракцион для туристов, там течет своя жизнь</p>
         </header>
-        <div class="benefit__preview-img">
-          <img src="img/photo-city-mobile@1x.jpg" width="320" height="260" alt="benefit preview">
+        <div class="benefit__preview-img benefit__header--toRight">
+          <img src="img/photo-city@1x.jpg" width="320" height="260" alt="benefit preview">
         </div>
       </div>
-      <div class="benefit__overview-items">
-        <div class="benefit__overview-item">
+      <div class="benefit__overview-items clearfix">
+        <div class="benefit__overview-item benefit__overview-item--accommodation">
           <h3 class="benefit__overview-item-title">Жилье</h3>
           <p class="benefit__overview-item-description">Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
         </div>
-        <div class="benefit__overview-item">
+        <div class="benefit__overview-item benefit__overview-item--souvenirs">
           <h3 class="benefit__overview-item-title">Сувениры</h3>
           <p class="benefit__overview-item-description">Не только китайского, но и местного производства!</p>
         </div>
-        <div class="benefit__overview-item">
+        <div class="benefit__overview-item benefit__overview-item--food">
           <h3 class="benefit__overview-item-title">Еда</h3>
           <p class="benefit__overview-item-description">Всегда заказывайте фирменный бургер, Вы не разочаруетесь!</p>
         </div>
       </div>
     </div>
   </section>
-  <section class="benefit">
-    <div class="benefit__wrapper">
-      <div class="benefit__header-wrapper">
-        <header class="benefit__header benefit__header--primary">
-          <h2 class="benefit__title">Там есть мост дьявола</h2>
-          <p class="benefit__number-subtitle">— №2 —</p>
-          <p class="benefit__subtitle">Да, по нему можно пройти! Если вы осмелитесь, конечно</p>
-        </header>
-        <div class="benefit__preview-img-wrapper">
-          <img class="benefit__preview-img" src="img/photo-4-mobile@1x.jpg" width="320" height="260"
-               alt="benefit preview">
+  <div class="clearfix">
+    <section class="benefit">
+      <div class="benefit__wrapper">
+        <div class="benefit__header-wrapper clearfix">
+          <header class="benefit__header benefit__header--primary benefit__header--toRight">
+            <h2 class="benefit__title">Там есть<br class="hidden-on-mobile"> мост дьявола</h2>
+            <p class="benefit__number-subtitle">— №2 —</p>
+            <p class="benefit__subtitle">Да, по нему можно пройти! Если вы осмелитесь, конечно</p>
+          </header>
+          <div class="benefit__preview-img benefit__header--toLeft">
+            <img src="img/photo-bridge@1x.png" width="320" height="260"
+                 alt="benefit preview">
+          </div>
         </div>
       </div>
-    </div>
-  </section>
-  <section class="benefit benefit--border-bottom">
-    <div class="benefit__wrapper">
-      <div class="benefit__header-wrapper">
-        <header class="benefit__header">
-          <h2 class="benefit__title">Небольшая площадь</h2>
-          <p class="benefit__number-subtitle">— №3 —</p>
-          <p class="benefit__subtitle">Все достопримечательности находятся очень близко</p>
-        </header>
+    </section>
+    <section class="benefit benefit--border-bottom benefit--inline">
+      <div class="benefit__wrapper">
+        <div class="benefit__header-wrapper">
+          <header class="benefit__header">
+            <h2 class="benefit__title">Небольшая<br class="hidden-on-mobile"> площадь</h2>
+            <p class="benefit__number-subtitle">— №3 —</p>
+            <p class="benefit__subtitle">Все достопримеча<span class="hidden-on-mobile">-<br></span> находятся очень
+              близко
+            </p>
+          </header>
+        </div>
       </div>
-    </div>
-  </section>
-  <section class="benefit benefit--border-bottom">
-    <div class="benefit__wrapper">
-      <div class="benefit__header-wrapper">
-        <header class="benefit__header">
-          <h2 class="benefit__title">Красивая дорога</h2>
-          <p class="benefit__number-subtitle">— №4 —</p>
-          <p class="benefit__subtitle">Ехать в Седону из Лас-Вегаса<br> совсем не скучно!</p>
-        </header>
+    </section>
+    <section class="benefit benefit--border-bottom benefit--inline">
+      <div class="benefit__wrapper">
+        <div class="benefit__header-wrapper">
+          <header class="benefit__header">
+            <h2 class="benefit__title">Красивая<br class="hidden-on-mobile"> дорога</h2>
+            <p class="benefit__number-subtitle">— №4 —</p>
+            <p class="benefit__subtitle">Ехать в Седону из Лас-Вегаса<br> совсем не скучно!</p>
+          </header>
+        </div>
       </div>
-    </div>
-  </section>
-  <section class="benefit">
-    <div class="benefit__wrapper">
-      <div class="benefit__header-wrapper">
-        <header class="benefit__header">
-          <h2 class="benefit__title">Мало туристов</h2>
-          <p class="benefit__number-subtitle">— №5 —</p>
-          <p class="benefit__subtitle">Большинство едет в гранд каньон<br> и толпится там</p>
-        </header>
+    </section>
+    <section class="benefit benefit--inline">
+      <div class="benefit__wrapper">
+        <div class="benefit__header-wrapper">
+          <header class="benefit__header">
+            <h2 class="benefit__title">Мало<br class="hidden-on-mobile"> туристов</h2>
+            <p class="benefit__number-subtitle">— №5 —</p>
+            <p class="benefit__subtitle">Большинство едет в гранд каньон<br> и толпится там</p>
+          </header>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
+  </div>
   <section class="contact">
     <div class="contact__wrapper">
       <p class="contact__title">Заинтересовались?</p>
-      <p class="contact__description">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц
-        в
-        Седоне</p>
-      <a href="#" class="btn">Найти гостиницу</a>
+      <p class="contact__description">Укажите предполагаемые даты поездки,<br class="hidden-on-mobile"> и мы покажем вам
+        лучшие предложения гостиниц в Седоне</p>
+      <a href="#" class="btn btn--big">Найти гостиницу</a>
     </div>
   </section>
   <section class="map">
     <div class="map__wrapper">
-      <img src="img/bg-map-mobile@1x.jpg" alt="Map" width="320" height="350">
+      <img src="img/map-desktop.jpg" alt="Map" width="320" height="350">
     </div>
   </section>
 </main>
 
-<footer class="page-footer">
+<footer class="page-footer container">
   <div class="page-footer__wrapper">
     <p class="page-footer__header">#visitsedona</p>
     <div class="page-footer__social-icons-wrapper">
@@ -139,11 +142,13 @@
         <li class="social__item social__item--yt"><a href="#"><img src="img/icon-youtube.svg" alt="Youtube"></a></li>
       </ul>
     </div>
-    <p class="copyright"><span class="copyright__text">Разработано</span>
-      <a href="https://www.htmlacademy.ru">
-        <img class="copyright__img" src="img/logo-htmlacademy.svg" alt="www.htmlacademy.ru" height="34" width="27">
-      </a>
-    </p>
+    <div class="page-footer__copyright-wrapper">
+      <p class="copyright"><span class="copyright__text">Разработано</span>
+        <a href="https://www.htmlacademy.ru">
+          <img class="copyright__img" src="img/logo-htmlacademy.svg" alt="www.htmlacademy.ru" height="34" width="27">
+        </a>
+      </p>
+    </div>
   </div>
 </footer>
 

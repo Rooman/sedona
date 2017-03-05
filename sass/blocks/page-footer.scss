@@ -1,6 +1,7 @@
 .page-footer {
   padding: 40px 0 35px;
   background-color: $lightgray-color;
+  font-size: 0;
 }
 
 .page-footer__header {
@@ -15,3 +16,25 @@
 .page-footer__social-icons-wrapper {
   margin-bottom: 40px;
 }
+
+@media #{$tablet-width} {
+  .page-footer {
+    padding: 35px 60px;
+  }
+  .page-footer__header,
+  .page-footer__social-icons-wrapper,
+  .page-footer__copyright-wrapper {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0;
+    width: 33.3%;
+  }
+
+  .page-footer__header {
+    text-align: left;
+  }
+  .page-footer__copyright-wrapper .copyright {
+    text-align: right;
+  }
+}
+

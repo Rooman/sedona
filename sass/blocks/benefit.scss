@@ -21,14 +21,14 @@
 }
 
 .benefit__title {
-  margin-bottom: 20px;
+  margin-bottom: 9px;
   font-weight: bold;
   font-size: 18px;
   line-height: 26px;
 }
 
 .benefit__number-subtitle {
-  margin-bottom: 25px;
+  margin-bottom: 15px;
   font-size: 14px;
   line-height: 21px;
 }
@@ -53,19 +53,18 @@
   background-size: 38px 38px;
   background-repeat: no-repeat;
   background-position: 22px 10px;
-}
+  &--accommodation {
+    background-image: url("../img/icon-house.svg");
+  }
 
-.benefit__overview-item:nth-child(1) {
-  background-image: url("../img/icon-house.svg");
-}
+  &--souvenirs {
+    background-image: url("../img/icon-gift.svg");
+  }
 
-.benefit__overview-item:nth-child(2) {
-  background-image: url("../img/icon-gift.svg");
-}
-
-.benefit__overview-item:nth-child(3) {
-  background-image: url("../img/icon-burger.svg");
-  padding-bottom: 0;
+  &--food {
+    background-image: url("../img/icon-burger.svg");
+    padding-bottom: 0;
+  }
 }
 
 .benefit__overview-item-title {
@@ -93,6 +92,80 @@
   border-bottom: 1px solid $benefit-border-color;
 }
 
-.benefit__preview-img {
+.benefit__preview-img img {
   height: 260px;
+}
+
+@media #{$tablet-width} {
+  .benefit__header--primary {
+    width: 33%;
+  }
+
+  .benefit__preview-img {
+    width: 67%;
+  }
+
+  .benefit__header--toLeft {
+    float: left;
+  }
+
+  .benefit__header--toRight {
+    float: right;
+  }
+
+  .benefit__header {
+    padding: 50px 45px;
+  }
+
+  .benefit:first-child::before {
+    display: none;
+  }
+
+  .benefit__overview-items {
+    padding: 60px 0 65px 0;
+  }
+
+  .benefit__overview-item {
+    width: 33%;
+    float: left;
+    padding: 100px 45px 0 45px;
+    text-align: center;
+    background-position-x: center;
+    &--accommodation {
+      background-size: 75px 72px;
+      background-position-y: 75px - 72px;
+    }
+
+    &--souvenirs {
+      background-size: 64px 75px;
+      background-position-y: 75px - 75px;
+    }
+
+    &--food {
+      background-size: 77px 68px;
+      background-position-y: 75px - 68px;
+    }
+  }
+
+  // move souvenirs to right o tablet and desktop
+  .benefit__overview-item--souvenirs {
+    float: right;
+  }
+
+  .benefit--inline {
+    width: 33.3%;
+    float: left;
+    min-height: 256px;
+    word-wrap: break-word;
+  }
+
+  .benefit--border-bottom:after {
+    display: none;
+  }
+}
+
+@media #{$desktop-width} {
+  .benefit__header {
+    padding: 63px 60px 58px;
+  }
 }

@@ -1,5 +1,6 @@
 .page-header__wrapper {
   background: url("../img/bg-back-mobile@1x.jpg") no-repeat center;
+  background-size: cover;
   position: relative;
   min-height: 160px;
 }
@@ -51,4 +52,19 @@
   line-height: 24px;
   text-transform: uppercase;
   color: $general-desc-color;;
+}
+
+@media #{$tablet-width} {
+  .page-header__wrapper--big {
+    min-height: 520px;
+  }
+
+  .page-header__title-img--big {
+    height: 345px;
+    width: 460px;
+  }
+
+  .page-header__title {
+    font-size: 21px;
+  }
 }

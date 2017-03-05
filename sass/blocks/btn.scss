@@ -1,5 +1,5 @@
 .btn {
-  min-width: 280px;
+  max-width: 280px;
   padding: 20px 0;
   background-color: $primary-color;
   text-align: center;
@@ -10,4 +10,11 @@
   color: $white-color;
   display: block;
   border: 0;
+}
+
+@media #{$tablet-width} {
+  .btn--big {
+    min-width: 460px;
+  }
+
 }

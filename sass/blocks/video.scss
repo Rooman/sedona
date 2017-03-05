@@ -20,4 +20,89 @@
   color: $general-desc-color;
 }
 
+.video__player-control-panel {
+  margin: -49px 20px 0 20px;
+}
 
+.video__player-scroll-wrapper {
+  background-color: rgba(0, 0, 0, .6);
+  padding: 19px 22px 17px 22px;
+  height: 45px;
+  position: relative;
+}
+
+.video__player-scroll {
+  -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
+  width: 100%; /* Specific width is required for Firefox. */
+  background: transparent; /* Otherwise white in Chrome */
+  padding: 0 22px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+// это только для chrome. :/
+.video__player-scroll::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 9px;
+  width: 9px;
+  border-radius: 50%;
+  background: #ffffff;
+  cursor: pointer;
+  margin-top: -3px;
+}
+
+.video__player-scroll:focus {
+  outline: none; /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
+}
+
+.video__player-scroll::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 3px;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 1.3px;
+}
+
+.video__player-controls {
+  padding: 22px 23px 24px 25px;
+  font-size: 0;
+  background-color: #f2f2f2;
+}
+
+.video__player-controls-left {
+  float: left;
+}
+
+.video__player-controls-right {
+  float: right;
+}
+
+.video__player-control-replay {
+  display: inline-block;
+  float: left;
+  width: 16px;
+  height: 20px;
+  background: url("../img/replay.svg") no-repeat;
+  background-size: cover;
+}
+
+.video__player-control-subtitles {
+  display: inline-block;
+  width: 32px;
+  height: 20px;
+  background: url("../img/subtitles.svg") no-repeat;
+  background-size: cover;
+  margin-right: 21px;
+}
+
+.video__player-control-fullscreen {
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  background: url("../img/fullscreen.svg") no-repeat;
+  background-size: cover;
+}
