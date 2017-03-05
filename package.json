@@ -1,7 +1,8 @@
 {
   "name": "sedona",
   "version": "0.1.0",
-  "private": true, ,
+  "private": true,
+  "description": "Личный проект «Sedona» от HTML Academy",
   "devDependencies": {
     "autoprefixer": "6.5.3",
     "browser-sync": "2.18.2",

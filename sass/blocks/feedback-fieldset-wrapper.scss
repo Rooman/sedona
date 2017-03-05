@@ -1,0 +1,17 @@
+.feedback-fieldset-wrapper {
+  padding: 25px 0;
+  border-top: 1px solid $generic-border-color;
+}
+
+.feedback-fieldset-wrapper fieldset {
+  border: 0;
+}
+
+.feedback-fieldset-wrapper legend {
+  font-size: 18px;
+  line-height: 26px;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 25px;
+}

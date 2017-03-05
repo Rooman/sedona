@@ -2,47 +2,51 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
+  <meta name=viewport content="width=device-width, initial-scale=1">
   <title>Главная</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 <header class="page-header">
   <nav class="main-nav">
-    <div class="page-header__logo">
-      <img src="http://placehold.it/100x85" alt="page logo" width="100" height="85">
+    <div class="main-nav__logo">
+      <img src="img/logo-sedona-mobile.svg" alt="page logo" width="100" height="85">
     </div>
-    <button class="main-nav__toggle">Открыть меню</button>
-    <div class="main-nav__wrapper">
-      <ul class="main-nav__items">
-        <li class="main-nav__item"><a href="index.html">Главная</a></li>
-        <li class="main-nav__item"><a href="media.html">Фото и видео</a></li>
-        <li class="main-nav__item"><a href="form.html">Форма отзыва</a></li>
-        <li class="main-nav__item"><a href="#">html academy</a></li>
-      </ul>
-    </div>
+    <!--пока что не знаю как задать цвет для svg :(-->
+    <button class="main-nav__toggle-open"><img src="img/icon-menu.svg" alt="Открыть меню"></button>
+    <button class="main-nav__toggle-close"><img src="img/icon-cross.svg" alt="Закрыть меню"></button>
+    <ul class="main-nav__items">
+      <li class="main-nav__item"><a href="index.html">Главная</a></li>
+      <li class="main-nav__item"><a href="media.html">Фото и видео</a></li>
+      <li class="main-nav__item"><a href="form.html">Форма отзыва</a></li>
+      <li class="main-nav__item"><a href="#">html academy</a></li>
+    </ul>
   </nav>
-  <h1 class="page-header__title">
-    Седона — небольшой городок в Аризоне, заслуживающий большего!
-  </h1>
-
-</header>
-
-<main>
-  <header class="benefit-header">
-    <h2 class="benefit-header__title">
+  <div class="page-header__wrapper page-header__wrapper--big">
+    <img class="page-header__title-img page-header__title-img--big" src="img/text-sedona-index.svg"
+         alt="welcome to Sedona" width="280" height="215">
+  </div>
+  <div class="page-header__title-wrapper">
+    <h1 class="page-header__title">
+      <!--как правильно переносить слова, что бы были как на макете? использовать br ?-->
+      Седона — небольшой городок в Аризоне, заслуживающий большего!
+    </h1>
+    <p class="page-header__sub-title">
       Рассмотрим 5 причин, по которым Седона круче чем гранд каньон!
-    </h2>
-  </header>
+    </p>
+  </div>
+</header>
+<main>
   <section class="benefit">
     <div class="benefit__wrapper">
       <div class="benefit__header-wrapper">
-        <header class="benefit__header">
+        <header class="benefit__header benefit__header--primary">
           <h2 class="benefit__title">Настоящий городок</h2>
-          <span class="benefit__number-subtitle">— №1 —</span>
+          <p class="benefit__number-subtitle">— №1 —</p>
           <p class="benefit__subtitle">Седона не аттракцион для туристов, там течет своя жизнь</p>
         </header>
         <div class="benefit__preview-img">
-          <img src="http://placehold.it/320x260" width="320" height="260" alt="benefit preview">
+          <img src="img/photo-city-mobile@1x.jpg" width="320" height="260" alt="benefit preview">
         </div>
       </div>
       <div class="benefit__overview-items">
@@ -64,35 +68,36 @@
   <section class="benefit">
     <div class="benefit__wrapper">
       <div class="benefit__header-wrapper">
-        <header class="benefit__header">
+        <header class="benefit__header benefit__header--primary">
           <h2 class="benefit__title">Там есть мост дьявола</h2>
-          <span class="benefit__number-subtitle">— №2 —</span>
+          <p class="benefit__number-subtitle">— №2 —</p>
           <p class="benefit__subtitle">Да, по нему можно пройти! Если вы осмелитесь, конечно</p>
         </header>
-        <div class="benefit__preview-img">
-          <img src="http://placehold.it/320x260" width="320" height="260" alt="benefit preview">
+        <div class="benefit__preview-img-wrapper">
+          <img class="benefit__preview-img" src="img/photo-4-mobile@1x.jpg" width="320" height="260"
+               alt="benefit preview">
         </div>
       </div>
     </div>
   </section>
-  <section class="benefit">
+  <section class="benefit benefit--border-bottom">
     <div class="benefit__wrapper">
       <div class="benefit__header-wrapper">
         <header class="benefit__header">
           <h2 class="benefit__title">Небольшая площадь</h2>
-          <span class="benefit__number-subtitle">— №3 —</span>
+          <p class="benefit__number-subtitle">— №3 —</p>
           <p class="benefit__subtitle">Все достопримечательности находятся очень близко</p>
         </header>
       </div>
     </div>
   </section>
-  <section class="benefit">
+  <section class="benefit benefit--border-bottom">
     <div class="benefit__wrapper">
       <div class="benefit__header-wrapper">
         <header class="benefit__header">
           <h2 class="benefit__title">Красивая дорога</h2>
-          <span class="benefit__number-subtitle">— №4 —</span>
-          <p class="benefit__subtitle">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+          <p class="benefit__number-subtitle">— №4 —</p>
+          <p class="benefit__subtitle">Ехать в Седону из Лас-Вегаса<br> совсем не скучно!</p>
         </header>
       </div>
     </div>
@@ -102,8 +107,8 @@
       <div class="benefit__header-wrapper">
         <header class="benefit__header">
           <h2 class="benefit__title">Мало туристов</h2>
-          <span class="benefit__number-subtitle">— №5 —</span>
-          <p class="benefit__subtitle">Большинство едет в гранд каньон и толпится там</p>
+          <p class="benefit__number-subtitle">— №5 —</p>
+          <p class="benefit__subtitle">Большинство едет в гранд каньон<br> и толпится там</p>
         </header>
       </div>
     </div>
@@ -111,16 +116,15 @@
   <section class="contact">
     <div class="contact__wrapper">
       <p class="contact__title">Заинтересовались?</p>
-      <p class="contact_description">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в
+      <p class="contact__description">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц
+        в
         Седоне</p>
       <a href="#" class="btn">Найти гостиницу</a>
     </div>
   </section>
   <section class="map">
     <div class="map__wrapper">
-      <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d497048.27793202415!2d-111.88234438958065!3d35.07272996770036!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCA4NjMzNiwg0KHQqNCQ!5e0!3m2!1sru!2sua!4v1484497437502"
-        height="auto" frameborder="0" style="border:0" allowfullscreen></iframe>
+      <img src="img/bg-map-mobile@1x.jpg" alt="Map" width="320" height="350">
     </div>
   </section>
 </main>
@@ -130,12 +134,16 @@
     <p class="page-footer__header">#visitsedona</p>
     <div class="page-footer__social-icons-wrapper">
       <ul class="social">
-        <li class="social__item"><a href="#">Twitter</a></li>
-        <li class="social__item"><a href="#">Facebook</a></li>
-        <li class="social__item"><a href="#">Youtube</a></li>
+        <li class="social__item social__item--tw"><a href="#"><img src="img/icon-twitter.svg" alt="Twitter"></a></li>
+        <li class="social__item social__item--fb"><a href="#"><img src="img/icon-facebook.svg" alt="Facebook"></a></li>
+        <li class="social__item social__item--yt"><a href="#"><img src="img/icon-youtube.svg" alt="Youtube"></a></li>
       </ul>
     </div>
-    <div class="copyright">Разработано</div>
+    <p class="copyright"><span class="copyright__text">Разработано</span>
+      <a href="https://www.htmlacademy.ru">
+        <img class="copyright__img" src="img/logo-htmlacademy.svg" alt="www.htmlacademy.ru" height="34" width="27">
+      </a>
+    </p>
   </div>
 </footer>
 
