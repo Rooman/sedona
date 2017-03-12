@@ -2,10 +2,14 @@
 @import "global/fonts";
 @import "global/variables";
 @import "global/normalize";
+@import "global/general";
 // block
 @import "blocks/page-header";
+@import "blocks/logo";
 @import "blocks/main-nav";
+@import "blocks/benefit-row";
 @import "blocks/benefit";
+@import "blocks/benefit-picture";
 @import "blocks/page-footer";
 @import "blocks/btn";
 @import "blocks/social";
