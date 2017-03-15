@@ -1,6 +1,7 @@
 // PAGE HEADER
 .page-header {
   position: relative;
+  padding-bottom: 35px;
 }
 
 // PAGE HEADER LOGO
@@ -19,16 +20,21 @@
   background-size: cover;
   position: relative;
   min-height: 160px;
-  padding-top: 90px;
+  padding-top: 54px;
+
+  img {
+    width: 230px;
+    margin: 0 auto;
+    display: block;
+  }
 }
 
 .page-header__promo--big {
+  padding-top: 90px;
   min-height: 390px;
 
   img {
     width: 280px;
-    margin: 0 auto;
-    display: block;
   }
 }
 
@@ -49,7 +55,7 @@
   text-align: center;
   padding-top: 45px;
   text-transform: uppercase;
-  margin: 0 30px 35px;
+  margin: 0 30px;
 }
 
 .page-header__title {
@@ -67,18 +73,25 @@
 
 // TABLET STYLES
 @media #{$tablet-width} {
+  .page-header {
+    padding-bottom: 55px;
+  }
   // PAGE HEADER LOGO
   .page-header .logo {
     top: 0;
   }
 
   // PAGE HEADER PROMO
-  .page-header__promo--big {
-    min-height: 520px;
+  .page-header__promo {
+    min-height: 290px;
+    padding-top: 95px;
     img {
-      height: 350px;
       width: 460px;
     }
+  }
+
+  .page-header__promo--big {
+    min-height: 520px;
   }
 
   .page-header__promo::after {
@@ -89,7 +102,8 @@
 
   // PAGE TITLE
   .page-header__title-wrapper {
-    margin: 0 135px 55px;
+    margin-left: 135px;
+    margin-right: 135px;
   }
 
   .page-header__title {
@@ -99,6 +113,14 @@
 
 @media #{$desktop-width} {
   // PAGE HEADER PROMO
+  .page-header__promo {
+    min-height: 300px;
+    padding-top: 105px;
+  }
+
+  .page-header__promo--big {
+    min-height: 520px;
+  }
   .page-header__promo::after {
     background-size: 1207px;
     height: 98px;
@@ -107,6 +129,7 @@
 
   // PAGE TITLE
   .page-header__title-wrapper {
-    margin: 0 350px 55px;
+    margin-left: 350px;
+    margin-right: 350px;
   }
 }

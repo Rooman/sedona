@@ -1,10 +1,10 @@
 .video {
   padding: 40px 0;
   text-align: center;
+  text-transform: uppercase;
 }
 
 .video__title {
-  text-transform: uppercase;
   font-weight: bold;
   font-size: 18px;
   line-height: 26px;
@@ -12,7 +12,6 @@
 }
 
 .video__subtitle {
-  text-transform: uppercase;
   font-size: 14px;
   line-height: 24px;
   margin-bottom: 43px;
@@ -26,7 +25,6 @@
 
 .video__player-scroll-wrapper {
   background-color: rgba(0, 0, 0, .6);
-  padding: 19px 22px 17px 22px;
   height: 45px;
   position: relative;
 }
@@ -73,36 +71,90 @@
   background-color: #f2f2f2;
 }
 
-.video__player-controls-left {
+.video__player-controls:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.video__player-left-controlls-wrapper {
   float: left;
 }
 
-.video__player-controls-right {
+.video__player-right-controlls-wrapper {
   float: right;
 }
 
-.video__player-control-replay {
+.video__player-right-controlls-wrapper:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.video__player-control {
   display: inline-block;
-  float: left;
+}
+
+.video__player-control--replay {
   width: 16px;
   height: 20px;
-  background: url("../img/replay.svg") no-repeat;
+  background: url("../img/icon-video-replay.svg") no-repeat;
   background-size: cover;
 }
 
-.video__player-control-subtitles {
-  display: inline-block;
+.video__player-control--subtitles {
   width: 32px;
   height: 20px;
-  background: url("../img/subtitles.svg") no-repeat;
+  background: url("../img/icon-video-subtitles.svg") no-repeat;
   background-size: cover;
   margin-right: 21px;
+  float: left;
 }
 
-.video__player-control-fullscreen {
-  display: inline-block;
+.video__player-control--fullscreen {
   height: 20px;
   width: 20px;
-  background: url("../img/fullscreen.svg") no-repeat;
+  background: url("../img/icon-video-fullscreen.svg") no-repeat;
   background-size: cover;
+  float: right;
+}
+
+// TABLET STYLES
+@media #{$tablet-width} {
+  .video {
+    padding: 60px 60px 40px 60px;
+  }
+
+  .video__player-control-panel {
+    margin: -93px 0 0;
+    position: relative;
+  }
+
+  .video__player-scroll-wrapper {
+    height: 90px;
+  }
+
+  .video__player-scroll {
+    padding: 0 166px 0 93px;
+  }
+
+  .video__player-controls {
+    background-color: transparent;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+    padding: 36px 41px 36px 35px;
+  }
+
+  .video__player-control--subtitles {
+    margin-right: 31px;
+  }
+}
+
+// DESKTOP WIDTH
+@media #{$desktop-width} {
+  .video {
+    padding-bottom: 86px;
+  }
 }

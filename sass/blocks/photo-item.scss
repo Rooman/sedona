@@ -1,40 +1,122 @@
 .photo-item {
   border-top: 1px solid $generic-border-color;
   padding: 24px 20px;
+  font-size: 14px;
+  line-height: 24px;
 }
 
 .photo-item--border-bottom {
   border-bottom: 1px solid $generic-border-color;
 }
 
-.photo-item__img-wrapper img {
-  height: 280px;
-  width: 280px;
+.photo-item__picture {
+  margin-bottom: 22px;
+  img {
+    width: 280px;
+    height: 280px;
+    object-fit: cover;
+  }
 }
 
-.photo-item__img-wrapper {
-  margin-bottom: 22px;
+.photo-item__about {
+  margin-bottom: 15px;
 }
 
 .photo-item__title {
-  margin-bottom: 10px;
-  text-transform: uppercase;
-  font-weight: bold;
   font-size: 14px;
   line-height: 24px;
+  text-transform: uppercase;
+  font-weight: bold;
 }
 
 .photo-item__author {
-  font-size: 14px;
-  line-height: 24px;
   font-style: normal;
-  margin-bottom: 15px;
   display: block;
+  color: #333;
 }
 
 .photo-item__likes-count {
-  font-size: 14px;
-  line-height: 24px;
   font-weight: bold;
   margin-left: 15px;
+  display: inline-block;
+  vertical-align: top;
+}
+
+// TABLET MEDIA
+@media #{$tablet-width} {
+  .photo-item {
+    display: inline-block;
+    border-top: 0;
+    padding: 0;
+    width: 50%;
+
+    .photo-item__picture {
+      margin-bottom: 0;
+    }
+
+    .photo-item__picture img {
+      width: 100%;
+      height: 270px;
+      display: block;
+    }
+  }
+
+  .photo-item--border-bottom {
+    border-bottom: 0;
+  }
+
+  .photo-item--primary {
+    width: 100% !important;
+
+    .photo-item__picture img {
+      height: 400px;
+    }
+  }
+
+  .photo-item__info {
+    background-color: #f2f2f2;
+  }
+
+  .photo-item__about {
+    float: left;
+    padding: 16px 0 16px 20px;
+    margin: 0;
+  }
+
+  .photo-item__like {
+    float: right;
+    padding: 26px 30px 26px 0;
+  }
+
+  .photo-item__likes-count {
+    margin-left: 10px;
+  }
+
+  .photo-item__info:after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+}
+
+// DESKTOP MEDIA
+@media #{$desktop-width} {
+  .photo-item {
+    width: 33.33%;
+    position: relative;
+  }
+
+  .photo-item__info {
+    background-color: rgba(0, 0, 0, 0.3);
+    width: 100%;
+    position: absolute;
+    bottom: -1px;
+    z-index: 1;
+  }
+
+  .photo-item__title,
+  .photo-item__author,
+  .photo-item__like {
+    color: $white-color;
+  }
 }
