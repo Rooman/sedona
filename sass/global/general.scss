@@ -1,0 +1,56 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "PT Sans", sans-serif;
+  background-color: #f2f2f2;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.hidden-on-mobile {
+  display: none;
+}
+
+.visible-on-desktop {
+  display: none;
+}
+
+.container {
+  background-color: #fff;
+}
+
+@media #{$tablet-width} {
+  .container {
+    width: 768px;
+    margin: 0 auto;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  }
+
+  .hidden-on-mobile {
+    display: inline;
+  }
+}
+
+@media #{$desktop-width} {
+  .container {
+    width: 1200px;
+    margin: 0 auto;
+  }
+
+  .visible-on-desktop {
+    display: inline;
+  }
+}

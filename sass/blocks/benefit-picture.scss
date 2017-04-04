@@ -1,0 +1,17 @@
+.benefit-picture img {
+  display: block;
+  min-height: 260px;
+}
+
+@media #{$tablet-width} {
+  .benefit-picture img {
+    display: none;
+  }
+
+  .benefit-picture {
+    background: url("../img/photo-city@1x.png") no-repeat;
+    background-size: cover;
+    width: 66.66%;
+    min-height: 256px;
+  }
+}

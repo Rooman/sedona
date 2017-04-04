@@ -1,98 +1,162 @@
-.benefit:first-child {
+.benefit {
+  text-transform: uppercase;
+  padding: 43px 20px 40px;
+  text-align: center;
   position: relative;
 }
 
-.benefit:first-child::before {
-  content: "";
-  display: block;
-  position: absolute;
-  background: url("../img/bg-triangle.svg") no-repeat;
-  background-size: 100%;
-  height: 45px;
-  width: 100%;
-  top: 0;
-}
-
-.benefit__header {
-  background-color: $gray-color;
-  padding: 35px 0;
-  text-align: center;
-  text-transform: uppercase;
-}
-
 .benefit__title {
-  margin-bottom: 20px;
-  font-weight: bold;
   font-size: 18px;
   line-height: 26px;
+  margin-bottom: 10px;
 }
 
 .benefit__number-subtitle {
-  margin-bottom: 25px;
+  margin-bottom: 12px;
+}
+
+.benefit__number-subtitle,
+.benefit__text {
   font-size: 14px;
   line-height: 21px;
 }
 
-.benefit__subtitle {
-  font-size: 14px;
-  line-height: 21px;
-}
-
-.benefit__header--primary {
+// BENEFIT MODIFICATIONS
+.benefit--blue {
   background-color: $primary-color;
-  padding: 60px 0 45px;
-  color: $white-color;
+  color: #fff;
 }
 
-.benefit__overview-items {
-  padding: 22px 0 45px;
-}
+.benefit--gray {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  background-color: $gray-color;
 
-.benefit__overview-item {
-  padding: 20px 0 20px 70px;
-  background-size: 38px 38px;
-  background-repeat: no-repeat;
-  background-position: 22px 10px;
-}
-
-.benefit__overview-item:nth-child(1) {
-  background-image: url("../img/icon-house.svg");
-}
-
-.benefit__overview-item:nth-child(2) {
-  background-image: url("../img/icon-gift.svg");
-}
-
-.benefit__overview-item:nth-child(3) {
-  background-image: url("../img/icon-burger.svg");
-  padding-bottom: 0;
-}
-
-.benefit__overview-item-title {
-  font-size: 18px;
-  line-height: 26px;
-  font-weight: bold;
-  text-transform: uppercase;
-  margin-bottom: 25px;
-}
-
-.benefit__overview-item-description {
-  text-transform: uppercase;
-  font-size: 14px;
-  line-height: 21px;
+  .benefit__number-subtitle,
+  .benefit__text {
+    color: $general-desc-color;
+  }
 }
 
 .benefit--border-bottom:after {
+  content: "";
+  display: block;
+  width: 87.5%;
   position: absolute;
   left: 0;
   right: 0;
-  margin: 0 auto;
-  display: block;
-  content: "";
-  width: 87.5%;
+  bottom: 0;
+  margin: auto;
   border-bottom: 1px solid $benefit-border-color;
 }
 
-.benefit__preview-img {
-  height: 260px;
+.benefit--border-bottom:last-child:after {
+  display: none;
 }
+
+// ICONS
+.benefit--icon {
+  padding: 40px 20px 0 70px;
+  text-align: left;
+
+  &-home {
+    background: url(../img/icon-house.svg) no-repeat 22px 30px;
+    background-size: 38px 37px;
+  }
+
+  &-souvenirs {
+    background: url(../img/icon-gift.svg) no-repeat 25px 28px;
+    background-size: 32px 38px;
+  }
+
+  &-food {
+    background: url(../img/icon-burger.svg) no-repeat 18px 35px;
+    background-size: 40px 35px;
+  }
+
+  .benefit__text {
+    color: $general-desc-color;
+  }
+
+  &:last-child {
+    margin-bottom: 40px;
+  }
+}
+
+// TABLET MEDIA
+@media #{$tablet-width} {
+  .benefit {
+    width: 33.3%;
+    min-height: 256px;
+    padding: 45px;
+  }
+
+  // BENEFIT MODIFICATIONS
+  .benefit--gray {
+    padding-left: 50px;
+    padding-right: 50px;
+
+    .benefit__title {
+      padding: 0 25px;
+    }
+  }
+
+  .benefit--border-bottom:after {
+    display: none;
+  }
+
+  // ICONS
+  .benefit--icon {
+    padding: 160px 45px 65px;
+    text-align: center;
+
+    &-home {
+      background-position: center 60px;
+      background-size: 75px 72px;
+    }
+
+    &-souvenirs {
+      background-position: center 57px;
+      background-size: 64px 75px;
+    }
+
+    &-food {
+      background-position: center 63px;
+      background-size: 77px 68px;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+// DESKTOP MEDIA
+@media #{$desktop-width} {
+  .benefit {
+    padding: 50px 55px 55px;
+  }
+
+  .benefit__title {
+    padding: 0 80px;
+  }
+
+  // BENEFIT MODIFICATIONS
+  .benefit--gray {
+    padding-bottom: 65px;
+
+    .benefit__title {
+      padding-left: 80px;
+      padding-right: 80px;
+    }
+  }
+
+  // ICONS
+  .benefit--icon {
+    padding: 160px 58px 85px;
+  }
+}
+
+
+
+

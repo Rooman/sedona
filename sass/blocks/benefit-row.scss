@@ -1,0 +1,48 @@
+.benefit-row {
+  position: relative;
+}
+
+.benefit-row::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.benefit-row--triangle:before {
+  content: "";
+  display: block;
+  height: 37px;
+  position: absolute;
+  top: -37px;
+  width: 100%;
+  z-index: 1;
+  background: $primary-color url("../img/bg-triangle.svg") no-repeat;
+}
+
+@media #{$tablet-width} {
+  // FIRST BENEFIT
+  .benefit-row .benefit {
+    float: left;
+  }
+
+  .benefit-row .benefit-picture {
+    float: right;
+  }
+
+  .benefit-row .benefit--icon-souvenirs {
+    float: right;
+  }
+
+  // SECOND BENEFIT
+  .benefit-row--invert .benefit {
+    float: right;
+  }
+
+  .benefit-row--invert .benefit-picture {
+    float: left;
+  }
+
+  .benefit-row--triangle:before {
+    display: none;
+  }
+}
