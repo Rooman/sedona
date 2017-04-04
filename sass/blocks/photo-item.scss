@@ -66,25 +66,21 @@
   }
 
   .photo-item--primary {
-    width: 100% !important;
-
-    .photo-item__picture img {
-      height: 400px;
-    }
+    width: 100%;
   }
 
   .photo-item__info {
     background-color: #f2f2f2;
+    display: flex;
+    justify-content: space-between;
   }
 
   .photo-item__about {
-    float: left;
     padding: 16px 0 16px 20px;
     margin: 0;
   }
 
   .photo-item__like {
-    float: right;
     padding: 26px 30px 26px 0;
   }
 
@@ -92,11 +88,6 @@
     margin-left: 10px;
   }
 
-  .photo-item__info:after {
-    content: "";
-    display: block;
-    clear: both;
-  }
 }
 
 // DESKTOP MEDIA
@@ -104,6 +95,10 @@
   .photo-item {
     width: 33.33%;
     position: relative;
+  }
+
+  .photo-item--primary {
+    width: 100%;
   }
 
   .photo-item__info {

@@ -21,12 +21,16 @@
 
 .video__player-control-panel {
   margin: -49px 20px 0 20px;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .video__player-scroll-wrapper {
   background-color: rgba(0, 0, 0, .6);
   height: 45px;
   position: relative;
+  flex-basis: 100%;
+  display: flex;
 }
 
 .video__player-scroll {
@@ -34,12 +38,7 @@
   width: 100%; /* Specific width is required for Firefox. */
   background: transparent; /* Otherwise white in Chrome */
   padding: 0 22px;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: auto;
+  margin: auto auto;
 }
 
 // это только для chrome. :/
@@ -69,26 +68,15 @@
   padding: 22px 23px 24px 25px;
   font-size: 0;
   background-color: #f2f2f2;
-}
-
-.video__player-controls:after {
-  content: "";
-  display: table;
-  clear: both;
+  display: flex;
+  width: 100%;
 }
 
 .video__player-left-controlls-wrapper {
-  float: left;
 }
 
 .video__player-right-controlls-wrapper {
-  float: right;
-}
-
-.video__player-right-controlls-wrapper:after {
-  content: "";
-  display: table;
-  clear: both;
+  margin-left: auto;
 }
 
 .video__player-control {
@@ -108,7 +96,6 @@
   background: url("../img/icon-video-subtitles.svg") no-repeat;
   background-size: cover;
   margin-right: 21px;
-  float: left;
 }
 
 .video__player-control--fullscreen {
@@ -116,7 +103,6 @@
   width: 20px;
   background: url("../img/icon-video-fullscreen.svg") no-repeat;
   background-size: cover;
-  float: right;
 }
 
 // TABLET STYLES
@@ -140,11 +126,11 @@
 
   .video__player-controls {
     background-color: transparent;
-    position: absolute;
-    top: 0;
     z-index: 1;
     width: 100%;
     padding: 36px 41px 36px 35px;
+    position: absolute;
+    top: 0;
   }
 
   .video__player-control--subtitles {

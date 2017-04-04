@@ -3,5 +3,7 @@
   .photos {
     padding: 20px 60px 0;
     font-size: 0;
+    display: flex;
+    flex-wrap: wrap;
   }
 }
