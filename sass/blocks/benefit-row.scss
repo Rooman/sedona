@@ -2,12 +2,6 @@
   position: relative;
 }
 
-.benefit-row::after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
 .benefit-row--triangle:before {
   content: "";
   display: block;
@@ -21,25 +15,14 @@
 
 @media #{$tablet-width} {
   // FIRST BENEFIT
-  .benefit-row .benefit {
-    float: left;
-  }
-
-  .benefit-row .benefit-picture {
-    float: right;
-  }
-
-  .benefit-row .benefit--icon-souvenirs {
-    float: right;
+  .benefit-row {
+    display: flex;
   }
 
   // SECOND BENEFIT
-  .benefit-row--invert .benefit {
-    float: right;
-  }
-
-  .benefit-row--invert .benefit-picture {
-    float: left;
+  .benefit-row--invert {
+    display: flex;
+    flex-direction: row-reverse;
   }
 
   .benefit-row--triangle:before {

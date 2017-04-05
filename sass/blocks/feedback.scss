@@ -55,7 +55,7 @@
   }
   input {
     display: inline-block;
-    width: 185px;
+
   }
 }
 
@@ -64,8 +64,10 @@
   margin-bottom: 20px;
 }
 
-.feedback__firstName-wrapper input {
-  width: 222px;
+.feedback__firstName-wrapper,
+.feedback__lastName-wrapper,
+.feedback__middleName-wrapper {
+  display: flex;
 }
 
 // CONTACTS
@@ -79,7 +81,7 @@
 }
 
 .feedback__input-with-icon input {
-  width: 222px;
+
 }
 
 .feedback__input-with-icon:after {
@@ -229,13 +231,34 @@
 // TABLET STYLES
 @media #{$tablet-width} {
 
-  // приплыли.
-  // TODO: пофиксить расположение блоков
-  .feedback__name {
-    float: right;
+  .feedback__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
   }
 
   .feedback__feelings {
-    float: right;
+    order: 1;
+  }
+
+  .feedback__name {
+    order: 2;
+  }
+
+  .feedback__contacts {
+    flex-basis: 100%;
+    order: 3;
+  }
+
+  .feedback__visited-places {
+    order: 4;
+  }
+
+  .feedback__emotions-text {
+    order: 5;
+  }
+
+  .feedback__submit {
+    order: 6;
   }
 }

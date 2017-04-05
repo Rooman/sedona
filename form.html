@@ -51,114 +51,116 @@
   <main>
     <section class="feedback">
       <form action="feedback.do" method="post" class="feedback__form">
+        <div class="feedback__wrapper">
 
-        <!-- First, Middle, Last names -->
-        <div class="feedback__name">
-          <fieldset>
-            <legend>Представтесь:</legend>
+          <!-- First, Middle, Last names -->
+          <div class="feedback__name">
+            <fieldset>
+              <legend>Представтесь:</legend>
 
-            <div class="feedback__firstName-wrapper">
-              <label for="firstName">Имя*: </label><input type="text" id="firstName" name="firstName"
-                                                          placeholder="Петр">
-            </div>
-
-            <div class="feedback__lastName-wrapper">
-              <label for="lastName">Фамилия*: </label><input type="text" id="lastName" name="lastName"
-                                                             placeholder="Иванов">
-            </div>
-
-            <div class="feedback__middleName-wrapper">
-              <label for="middleName">Отчество*: </label><input type="text" id="middleName" name="middleName"
-                                                                placeholder="Александрович">
-            </div>
-          </fieldset>
-        </div>
-
-        <!-- Contact info -->
-        <div class="feedback__contacts">
-          <fieldset>
-            <legend>Контактная информация:</legend>
-
-            <div class="feedback__phone-wrapper">
-              <label for="phone">Контактный телефон*: </label>
-              <div class="feedback__input-with-icon feedback__input-with-icon--phone">
-                <input type="tel" id="phone" name="phone" placeholder="Введите телефон">
+              <div class="feedback__firstName-wrapper">
+                <label for="firstName">Имя*: </label><input type="text" id="firstName" name="firstName"
+                                                            placeholder="Петр">
               </div>
-              <!-- Validation message -->
-              <div class="feedback__phone-validation hidden">Ошибка, перепроверьте номер</div>
-            </div>
 
-            <div class="feedback__email-wrapper">
-              <label for="email">Электронная почта*: </label>
-              <div class="feedback__input-with-icon feedback__input-with-icon--email">
-                <input type="email" id="email" name="email" placeholder="Введите e-mail">
+              <div class="feedback__lastName-wrapper">
+                <label for="lastName">Фамилия*: </label><input type="text" id="lastName" name="lastName"
+                                                               placeholder="Иванов">
               </div>
-            </div>
-          </fieldset>
-        </div>
 
-        <!-- Feelings -->
-        <div class="feedback__feelings">
-          <fieldset>
-            <legend>Ваше общее впечатление:</legend>
+              <div class="feedback__middleName-wrapper">
+                <label for="middleName">Отчество*: </label><input type="text" id="middleName" name="middleName"
+                                                                  placeholder="Александрович">
+              </div>
+            </fieldset>
+          </div>
 
-            <div class="feedback__feeling-item">
-              <input id="goodFeelings" type="radio" name="feelings" value="1">
-              <label for="goodFeelings"> Скорее положительное</label>
-            </div>
+          <!-- Contact info -->
+          <div class="feedback__contacts">
+            <fieldset>
+              <legend>Контактная информация:</legend>
 
-            <div class="feedback__feeling-item">
-              <input id="badFeelings" type="radio" name="feelings" value="2">
-              <label for="badFeelings"> Скорее отрицательное</label>
-            </div>
+              <div class="feedback__phone-wrapper">
+                <label for="phone">Контактный телефон*: </label>
+                <div class="feedback__input-with-icon feedback__input-with-icon--phone">
+                  <input type="tel" id="phone" name="phone" placeholder="Введите телефон">
+                </div>
+                <!-- Validation message -->
+                <div class="feedback__phone-validation hidden">Ошибка, перепроверьте номер</div>
+              </div>
 
-            <div class="feedback__feeling-item">
-              <input id="uncertainFeelings" type="radio" name="feelings" value="3">
-              <label for="uncertainFeelings"> Затрудняюсь ответить</label>
-            </div>
-          </fieldset>
-        </div>
+              <div class="feedback__email-wrapper">
+                <label for="email">Электронная почта*: </label>
+                <div class="feedback__input-with-icon feedback__input-with-icon--email">
+                  <input type="email" id="email" name="email" placeholder="Введите e-mail">
+                </div>
+              </div>
+            </fieldset>
+          </div>
 
-        <!-- Visited places -->
-        <div class="feedback__visited-places">
-          <fieldset>
-            <legend>Посещенные достопримечательности:</legend>
+          <!-- Feelings -->
+          <div class="feedback__feelings">
+            <fieldset>
+              <legend>Ваше общее впечатление:</legend>
 
-            <div class="feedback__place-item">
-              <input id="placeOne" type="checkbox" name="place_1">
-              <label for="placeOne"> Мост Дьявола</label>
-            </div>
+              <div class="feedback__feeling-item">
+                <input id="goodFeelings" type="radio" name="feelings" value="1">
+                <label for="goodFeelings"> Скорее положительное</label>
+              </div>
 
-            <div class="feedback__place-item">
-              <input id="placeTwo" type="checkbox" name="place_2">
-              <label for="placeTwo"> Слайд-парк</label>
-            </div>
+              <div class="feedback__feeling-item">
+                <input id="badFeelings" type="radio" name="feelings" value="2">
+                <label for="badFeelings"> Скорее отрицательное</label>
+              </div>
 
-            <div class="feedback__place-item">
-              <input id="placeTree" type="checkbox" name="place_3">
-              <label for="placeTree"> Гора-колокол</label>
-            </div>
+              <div class="feedback__feeling-item">
+                <input id="uncertainFeelings" type="radio" name="feelings" value="3">
+                <label for="uncertainFeelings"> Затрудняюсь ответить</label>
+              </div>
+            </fieldset>
+          </div>
 
-            <div class="feedback__place-item">
-              <input id="placeFour" type="checkbox" name="place_4">
-              <label for="placeFour"> Красные скалы</label>
-            </div>
-          </fieldset>
-        </div>
+          <!-- Visited places -->
+          <div class="feedback__visited-places">
+            <fieldset>
+              <legend>Посещенные достопримечательности:</legend>
 
-        <!-- Emotions -->
-        <div class="feedback__emotions-text">
-          <fieldset>
-            <legend>Опишите свои эмоции:</legend>
+              <div class="feedback__place-item">
+                <input id="placeOne" type="checkbox" name="place_1">
+                <label for="placeOne"> Мост Дьявола</label>
+              </div>
 
-            <textarea name="emotions-text"
-                      placeholder="Опишите подробно все свои восторги"></textarea>
-          </fieldset>
-        </div>
+              <div class="feedback__place-item">
+                <input id="placeTwo" type="checkbox" name="place_2">
+                <label for="placeTwo"> Слайд-парк</label>
+              </div>
 
-        <!-- Send feedback button -->
-        <div class="feedback__submit">
-          <button type="submit" class="btn">отправить заказ</button>
+              <div class="feedback__place-item">
+                <input id="placeTree" type="checkbox" name="place_3">
+                <label for="placeTree"> Гора-колокол</label>
+              </div>
+
+              <div class="feedback__place-item">
+                <input id="placeFour" type="checkbox" name="place_4">
+                <label for="placeFour"> Красные скалы</label>
+              </div>
+            </fieldset>
+          </div>
+
+          <!-- Emotions -->
+          <div class="feedback__emotions-text">
+            <fieldset>
+              <legend>Опишите свои эмоции:</legend>
+
+              <textarea name="emotions-text"
+                        placeholder="Опишите подробно все свои восторги"></textarea>
+            </fieldset>
+          </div>
+
+          <!-- Send feedback button -->
+          <div class="feedback__submit">
+            <button type="submit" class="btn">отправить заказ</button>
+          </div>
         </div>
       </form>
     </section>
